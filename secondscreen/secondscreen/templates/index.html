@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css"> 
+	<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.2"></script>
+
+	<style type="text/css">
+	#maindiv{
+		display: inline-block;
+		width: 500px;
+		height: 500px;
+		background-image: url("{{ STATIC_URL }}images/map.png"); 
+	}
+	path {
+	  fill-rule: evenodd;
+	  fill: #fff;
+	  fill-opacity: .7;
+	  stroke: #666;
+	  stroke-width: 1px;
+	}
+	</style>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/positions.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<div id="maindiv">
+		<div class="purple inhibs">
+			<svg id="top-purple-inhib">
+		  		<circle cx="15" cy="15" r="15" fill="purple"/>
+			</svg > 
+			<svg id="mid-purple-inhib">
+		  		<circle cx="15" cy="15" r="15" fill="purple"/>
+			</svg> 
+			<svg id="bot-purple-inhib">
+		  		<circle cx="15" cy="15" r="15" fill="purple"/>
+			</svg> 
+		</div>
+		<div class="blue inhibs">
+			<svg id="top-blue-inhib">
+		  		<circle cx="15" cy="15" r="15" fill="purple"/>
+			</svg > 
+			<svg id="mid-blue-inhib">
+		  		<circle cx="15" cy="15" r="15" fill="purple"/>
+			</svg> 
+			<svg id="bot-blue-inhib">
+		  		<circle cx="15" cy="15" r="15" fill="purple"/>
+			</svg> 
+		</div>
+		<div class="purple buffs">
+			<svg id="purple-blue">
+		  		<circle cx="15" cy="15" r="15" fill="blue"/>
+			</svg > 
+			<svg id="purple-red">
+		  		<circle cx="15" cy="15" r="15" fill="darkred"/>
+			</svg> 
+		</div>
+		<div class="blue buffs">
+			<svg id="blue-blue">
+		  		<circle cx="15" cy="15" r="15" fill="blue"/>
+			</svg > 
+			<svg id="blue-red">
+		  		<circle cx="15" cy="15" r="15" fill="darkred"/>
+			</svg> 
+		</div>
+		<div class="global">
+			<svg id="dragon">
+		  		<circle cx="15" cy="15" r="15" fill="orange"/>
+			</svg > 
+			<svg id="baron">
+		  		<circle cx="15" cy="15" r="15" fill="orange"/>
+			</svg> 
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{{ STATIC_URL }}js/speech.js"></script>
+
+</body>
+</html>

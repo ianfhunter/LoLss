@@ -1,0 +1,53 @@
+#top-purple-inhib{
+	top: 20px;
+	left: 365px;
+}
+#mid-purple-inhib{
+	top: 85px;
+	left: 375px;
+}
+#bot-purple-inhib{
+	top: 100px;
+	left: 440px;
+}
+
+#top-blue-inhib{
+	top: 355px;
+	left: 50px;
+}
+#mid-blue-inhib{
+	top: 375px;
+	left: 105px;
+}
+#bot-blue-inhib{
+	top: 435px;
+	left: 110px;
+}
+
+#purple-red{
+	top: 110px;
+	left: 235px;	
+}
+#purple-blue{
+	top: 260px;
+	left: 365px;	
+}
+
+
+#blue-red{
+	top: 350px;
+	left: 255px;	
+}
+#blue-blue{
+	top: 210px;
+	left: 125px;	
+}
+
+#dragon{
+	top: 315px;
+	left: 330px;		
+}
+#baron{
+	top: 135px;
+	left: 165px;	
+}

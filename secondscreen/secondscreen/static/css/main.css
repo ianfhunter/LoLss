@@ -1,0 +1,17 @@
+body{
+	margin: 0px;
+}
+#map{
+		width: auto;
+		height: 100%;
+		display: inline-block;
+}
+svg{
+	height: 50px;
+	width: 50px;
+	display: inline-block;
+	position: absolute;
+}
+svg circle:hover{
+	fill:yellow;
+}
