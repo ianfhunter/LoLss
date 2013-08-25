@@ -2,7 +2,7 @@
 
 $("svg").click(function(){
 	start = new Date();
-	timer = 300;
+	timer = 10;
 
 	var w = 100,
 	    h = 100,
@@ -18,12 +18,11 @@ $("svg").click(function(){
 	  .append("svg:g")
 	    .attr("transform", "translate(-10,15)");
 
-	setInterval(function() {
+	setId = setInterval(function() {
 	  var now = new Date();
 
 	  fields[0].previous = fields[0].value; 
-	  change = ((now.getMinutes() - start.getMinutes())*60) + now.getSeconds() - start.getSeconds();
-	  fields[0].value = change;
+	  fields[0].value = ((now.getMinutes() - start.getMinutes())*60) + now.getSeconds() - start.getSeconds();
 
 	  var path = svg.selectAll("path")
 	      .data(fields.filter(function(d) { return d.value; }), function(d) { return d.name; });
@@ -50,15 +49,27 @@ $("svg").click(function(){
 
 
 })
+
+var a;
 function arcTween(b) {
 	var arc = d3.svg.arc()
 	    .innerRadius(0)
 	    .outerRadius(15)
 	    .startAngle(0)
-	    .endAngle(function(d) { return (d.value / d.size) * 2 * Math.PI; });
+	    .endAngle(function(d) { 
+	    	if(d.value > timer){
+	    		clearInterval(setId);
+	    		$("g").remove();
+	    	}
+			else if(d.value > 0){
+		    	return ((d.value/d.size) * 2 * Math.PI);
+			}else{
+				return 0;
+			}
+		})
 
-  var i = d3.interpolate({value: b.previous}, b);
-  return function(t) {
-    return arc(i(t));
-  };
+  	var i = d3.interpolate({value: b.previous}, b);
+  	return function(t) {
+    	return arc(i(t));
+  	};
 }
