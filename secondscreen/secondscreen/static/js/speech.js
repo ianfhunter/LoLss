@@ -1,3 +1,7 @@
+/*
+ Modified from http://bl.ocks.org/mbostock/1098617
+*/
+
 function timeDiff(a,b){
 	return ((b.getMinutes() - a.getMinutes())*60) + b.getSeconds() - a.getSeconds()
 }
@@ -69,10 +73,16 @@ function Timer(countdown,obj){
 		      .duration(750)
 		      .attrTween("d", that.arcTween);
 
-		}, 1000);
+		}, 100);
 	}
 }
 
-$("svg").click(function(){
-	time = new Timer(10,this);
+$(".red,.blue,.inhib").click(function(){
+	time = new Timer(300,this);
+})
+$("#dragon").click(function(){
+	time = new Timer(360,this);
+})
+$("#baron").click(function(){
+	time = new Timer(420,this);
 })
