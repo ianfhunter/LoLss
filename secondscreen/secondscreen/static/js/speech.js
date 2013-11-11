@@ -86,3 +86,26 @@ $("#dragon").click(function(){
 $("#baron").click(function(){
 	time = new Timer(420,this);
 })
+// $(".ward").click(function(){
+// 	time = new Timer(180,this);
+// })
+$(".ward").draggable({
+  stop: function( event, ui ) {
+
+	$(this).draggable( "disable" );
+	//colour in css
+	var exit_button = $("<svg class='exit' >"+
+	"<g xmlns='http://www.w3.org/2000/svg' fill='black' id='layer1' transform='translate(25,25) scale(0.1)' >"+
+   		"<path stroke-width='0.25pt' id='path4950' d='m100,60l-40,40l170,170l40,-40l-170,-170z'/>"+
+   		"<path stroke-width='0.25pt' id='path4952' d='m60,230l170,-170l40,40l-170,170l-40,-40z'/>"+
+  	"</g></svg>");
+	$(this).append(exit_button);
+	time = new Timer(180,this);
+	//TODO: make the timer circle fit the ward shape
+
+	exit_button.click(function(){
+		$(this).parent().remove();
+	});
+
+  }
+});

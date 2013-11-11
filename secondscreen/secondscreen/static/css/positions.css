@@ -51,3 +51,31 @@
 	top: 135px;
 	left: 165px;	
 }
+.green .ward{
+	left: 630px;
+	top: 50px;
+}
+.pink .ward{
+	left: 570px;
+	top: 50px;
+}
+#maindiv{
+	display:inline-block;
+}
+#sidebar{
+	position:absolute;
+	display:inline;
+	top:0px;
+	left: 500px;
+}
+.ward_title{
+	position:relative;
+	left: 50px;
+}
+.chat{
+	background-color: lightblue;
+	position:relative;
+	top:70px;
+	width: 250px;
+	height: 380px;
+}

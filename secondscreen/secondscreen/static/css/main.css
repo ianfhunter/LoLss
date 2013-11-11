@@ -12,6 +12,9 @@ svg{
 	display: inline-block;
 	position: absolute;
 }
-svg circle:hover{
+svg circle:hover :not(.ward){
 	fill:yellow;
+}
+.ward:hover{
+	fill: orange;
 }

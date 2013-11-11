@@ -10,6 +10,7 @@
 		width: 500px;
 		height: 500px;
 		background-image: url("{{ STATIC_URL }}images/map.png"); 
+		background-size: 100%;
 	}
 	path {
 	  fill-rule: evenodd;
@@ -18,12 +19,19 @@
 	  stroke: #666;
 	  stroke-width: 1px;
 	}
+	.exit g path{
+		fill: #000 !important;
+	}
 	</style>
 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/positions.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 </head>
 <body>
+	<div id="sidebar">
+		<p class="ward_title"> WARDS, Click to Drag</p>
+		<div class="chat" ></div>
+	</div>
 
 	<div id="maindiv">
 		<div class="purple inhibs">
@@ -71,6 +79,58 @@
 			<svg id="baron">
 		  		<circle cx="15" cy="15" r="15" fill="orange"/>
 			</svg> 
+		</div>
+		<div class="wards green" >
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="green" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="green"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="green" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="green"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="green" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="green"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="green" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="green"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="green" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="green"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="green" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="green"/>
+			</svg > 
+		</div>
+		<div class="wards pink" >
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="pink" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="pink"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="pink" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="pink"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="pink" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="pink"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="pink" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="pink"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="pink" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="pink"/>
+			</svg > 
+			<svg class="ward" draggable="true" >
+		  		<circle class="range" cx="25" cy="25" r="25" fill="pink" opacity="0.5"/>
+		 		<circle class="center" cx="25" cy="25" r="5" fill="pink"/>
+			</svg > 
 		</div>
 	</div>
 

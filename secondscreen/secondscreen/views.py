@@ -7,7 +7,10 @@ def home(request):
     template = loader.get_template('index.html')
 
     context = RequestContext(request, {
-    #"match":match_settings,
+
     })
 
+    return HttpResponse(template.render(context))
+
+def save(request):
     return HttpResponse(template.render(context))
