@@ -18,3 +18,8 @@ svg circle:hover :not(.ward){
 .ward:hover{
 	fill: orange;
 }
+.chat > div{
+	margin-left: 5px;
+	margin-bottom: 5px;
+
+}
