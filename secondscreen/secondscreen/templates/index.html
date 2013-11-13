@@ -33,8 +33,10 @@
 	<div id="sidebar">
 		<p class="ward_title"> WARDS, Click to Drag</p>
 		<div class="chat" >
-			
-		    <div style="position:relative;"><b>Choose Color</b></div>
+			<br />
+		    <input type="button" id="switchbutton" name="switchbutton" value="Toggle Drawing/Timing" onclick="switchView()">	<br />		
+			<br />
+		    <div style="position:relative;"><b>Choose Color</b></div><br /><br />
 		    <div style="position:relative;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
 		    <div style="position:relative;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
 		    <div style="position:relative;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
@@ -44,7 +46,9 @@
 		    <div style="position:relative;width:10px;height:10px;background:white;" id="white" onclick="color(this)"></div>
 		    <img id="canvasimg" style="position:relative;top:10%;left:52%;" style="display:none;">
 
-		    <input type="range" id="brushsize" name="points" min="1" max="25" onclick="range(this)">
+		    <br />
+		    <input type="range" id="brushsize" name="points" min="1" max="25" onclick="range(this)"><br />
+		    <br />
 		    <input type="button" id="resetbutton" name="resetbutton" value="Clear Drawings" onclick="DoClear()">
 
 		</div>

@@ -63,6 +63,10 @@ function DoClear(){
     ctx.clearRect ( 0 , 0 , w , h );
 }
 
+function switchView(){
+    $("#can").toggle();
+}
+
 function draw() {
     ctx.beginPath();
     ctx.moveTo(prevX, prevY);
