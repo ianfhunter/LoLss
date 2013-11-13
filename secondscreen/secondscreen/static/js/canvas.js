@@ -59,6 +59,9 @@ function range(obj){
             y = obj.value;
     }
 }
+function DoClear(){
+    ctx.clearRect ( 0 , 0 , w , h );
+}
 
 function draw() {
     ctx.beginPath();
