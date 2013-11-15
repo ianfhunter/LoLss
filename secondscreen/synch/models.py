@@ -19,6 +19,7 @@ class Screen(models.Model):
         bottom_inhib_mlane = models.IntegerField(max_length=3, null=True)
         bottom_inhib_blane = models.IntegerField(max_length=3, null=True)
         
+        drawing = models.CharField(max_length=30000)    #30KB MAX
 
 class Ward(models.Model):
         position_x = models.IntegerField(max_length=3, null=True)

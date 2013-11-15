@@ -20,6 +20,8 @@ def home2(request,unique_id):
     pad = Screen.objects.all().order_by('page_id')[0]
 
     context = RequestContext(request, {
+        "uid": unique_id,
+
         "baron":pad.baron_timer,
         "dragon":pad.dragon_timer,
 
@@ -42,6 +44,9 @@ def home2(request,unique_id):
 
     return HttpResponse(template.render(context))
 
-
 def save(request):
-    return HttpResponse(template.render(context))
+    wards = request.POST.get('wards')               #array of wards & their positions
+    timer_start = request.POST.get('timer_start')   #which timer has started
+    timer_start = request.POST.get('drawing')   #which timer has started
+
+    return redirect('/')
