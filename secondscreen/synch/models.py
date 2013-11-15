@@ -1,25 +1,25 @@
 from django.db import models
 
 class Screen(models.Model):
-        page_id = models.IntegerField(max_length=3, null=True)
+        page_id = models.CharField(max_length=5,default='')
 
-        baron_timer = models.IntegerField(max_length=3, null=True)
-        dragon_timer = models.IntegerField(max_length=3, null=True)
+        baron_timer = models.IntegerField(max_length=3, null=True,default=0)
+        dragon_timer = models.IntegerField(max_length=3, null=True,default=0)
 
-        top_blue_timer = models.IntegerField(max_length=3, null=True)
-        top_red_timer = models.IntegerField(max_length=3, null=True)
-        bottom_blue_timer = models.IntegerField(max_length=3, null=True)
-        bottom_red_timer = models.IntegerField(max_length=3, null=True)
+        top_blue_timer = models.IntegerField(max_length=3, null=True,default=0)
+        top_red_timer = models.IntegerField(max_length=3, null=True,default=0)
+        bottom_blue_timer = models.IntegerField(max_length=3, null=True,default=0)
+        bottom_red_timer = models.IntegerField(max_length=3, null=True,default=0)
 
-        top_inhib_tlane = models.IntegerField(max_length=3, null=True)
-        top_inhib_mlane = models.IntegerField(max_length=3, null=True)
-        top_inhib_blane = models.IntegerField(max_length=3, null=True)
+        top_inhib_tlane = models.IntegerField(max_length=3, null=True,default=0)
+        top_inhib_mlane = models.IntegerField(max_length=3, null=True,default=0)
+        top_inhib_blane = models.IntegerField(max_length=3, null=True,default=0)
 
-        bottom_inhib_tlane = models.IntegerField(max_length=3, null=True)
-        bottom_inhib_mlane = models.IntegerField(max_length=3, null=True)
-        bottom_inhib_blane = models.IntegerField(max_length=3, null=True)
+        bottom_inhib_tlane = models.IntegerField(max_length=3, null=True,default=0)
+        bottom_inhib_mlane = models.IntegerField(max_length=3, null=True,default=0)
+        bottom_inhib_blane = models.IntegerField(max_length=3, null=True,default=0)
         
-        drawing = models.CharField(max_length=30000)    #30KB MAX
+        drawing = models.CharField(max_length=30000,default='')    #30KB MAX
 
 class Ward(models.Model):
         position_x = models.IntegerField(max_length=3, null=True)

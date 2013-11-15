@@ -16,13 +16,19 @@ def home(request):
 #For generated Unique Urls
 def home2(request,unique_id):
     template = loader.get_template('index.html')
+    pad = Screen.objects.filter(page_id=unique_id)
 
-    pad = Screen.objects.all().order_by('page_id')[0]
-
+    #if doesnt exist, create, otherwise load.
+    if(pad.count() is 0):
+    	pad = Screen(page_id=unique_id)
+    	pad.save()
+    else:
+	    pad = Screen.objects.get(page_id=unique_id)
+ 
     context = RequestContext(request, {
         "uid": unique_id,
 
-        "baron":pad.baron_timer,
+        "baron":pad.baron_timer ,
         "dragon":pad.dragon_timer,
 
         "top_blue":pad.top_blue_timer,
