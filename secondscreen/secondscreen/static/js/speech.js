@@ -107,6 +107,7 @@ $(".ward").draggable({
 		$(".pink").append($(this).parent());
 		$(this).parent().draggable( "enable" );
 		$(this).parent().removeAttr( 'style' );
+		$(this).next().remove();
 		$(this).remove();
 	});
 
