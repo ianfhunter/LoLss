@@ -26,12 +26,11 @@
 	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/positions.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<script src="static/js/canvas.js"></script>
-
+	<script src="{{ STATIC_URL }}js/canvas.js"></script>
 </head>
 <body>
 	<div id="sidebar">
-		<p class="ward_title"> WARDS, Click to Drag</p>
+		<p class="ward_title"> WARDS, Click to Drag{{bot_red}}</p>
 		<div class="chat" >
 			<br />
 		    <input type="button" id="switchbutton" name="switchbutton" value="Toggle Drawing/Timing" onclick="switchView()">	<br />		
@@ -50,7 +49,6 @@
 		    <input type="range" id="brushsize" name="points" min="1" max="25" onclick="range(this)"><br />
 		    <br />
 		    <input type="button" id="resetbutton" name="resetbutton" value="Clear Drawings" onclick="DoClear()">
-
 		</div>
 	</div>
 
@@ -158,5 +156,14 @@
 
 	<script type="text/javascript" src="{{ STATIC_URL }}js/speech.js"></script>
 
+<!--<style>
+    #wrap { width: 1400px; height: 600px;padding: 0; position:relative; overflow: hidden; }
+    #frame { width: 1349px; height: 600px; position:relative; }
+    #frame { -ms-zoom: 0.56; -moz-transform: scale(0.56); -moz-transform-origin: 0px 0; -o-transform: scale(0.56); -o-transform-origin: 0 0; -webkit-transform: scale(0.56); -webkit-transform-origin: 0 0; }
+</style>
+<div id="wrap">
+    <iframe id="frame" src="http://www.lolteam.net/game/Dyrus"></iframe>
+</div>
+-->
 </body>
 </html>

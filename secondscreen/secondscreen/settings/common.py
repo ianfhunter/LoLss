@@ -188,6 +188,8 @@ DJANGO_APPS = (
     # Admin panel and documentation:
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'synch',
+
 )
 
 THIRD_PARTY_APPS = (

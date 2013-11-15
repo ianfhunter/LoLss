@@ -13,4 +13,6 @@ urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^$', views.home, name="home"),
+	url(r'^pad/(?P<unique_id>\w+)$', views.home2, name="home2"),
+
 )
