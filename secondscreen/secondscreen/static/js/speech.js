@@ -104,7 +104,6 @@ $(".ward").draggable({
 	//TODO: make the timer circle fit the ward shape
 
 	exit_button.click(function(){
-		$(".pink").append($(this).parent());
 		$(this).parent().draggable( "enable" );
 		$(this).parent().removeAttr( 'style' );
 		$(this).next().remove();
