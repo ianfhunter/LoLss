@@ -14,5 +14,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 	url(r'^$', views.home, name="home"),
 	url(r'^pad/(?P<unique_id>\w+)$', views.home2, name="home2"),
+	url(r'^save/', views.save, name="save"),
 
 )

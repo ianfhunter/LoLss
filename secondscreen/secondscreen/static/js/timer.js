@@ -77,6 +77,14 @@ function Timer(countdown,obj){
 	}
 }
 
+function getEndURL(url){
+    return url.split('/').pop()
+}
+function saveItem(a,b,c){
+	$.post( "../save/", { id:getEndURL(window.location.href),wards: a, timer_start: b,drawing: c } );
+
+}
+
 $(".red,.blue,.inhib").click(function(){
 	time = new Timer(300,this);
 })
@@ -85,10 +93,11 @@ $("#dragon").click(function(){
 })
 $("#baron").click(function(){
 	time = new Timer(420,this);
+	saveItem(null,"baron",null);
+	//				  ignore wards, 
+	
 })
-// $(".ward").click(function(){
-// 	time = new Timer(180,this);
-// })
+
 $(".ward").draggable({
   stop: function( event, ui ) {
 
