@@ -7,14 +7,12 @@ from synch.models import *
 import datetime
 from datetime import datetime
 from django.utils import formats
+
 def home(request):
     template = loader.get_template('home.html')
-
     pad = Screen.objects.all().order_by('page_id')[0]
 
-    context = RequestContext(request, {
-    })
-
+    context = RequestContext(request, {})
     return HttpResponse(template.render(context))
 
 #For generated Unique Urls
@@ -61,13 +59,11 @@ def save(request):
     drawing = request.POST.get('drawing')   #which timer has started
     unique_id = request.POST.get('id')   #which timer has started
 
-    print timer_start
-
     if(timer_start is not None):    
         pad = Screen(page_id=unique_id)
         time = datetime.now()
 
-
+    # TODO: Convert this into a dictionary and reduce    
     if(timer_start == "baron"):
         pad.baron_timer = time
     if(timer_start == "dragon"):
